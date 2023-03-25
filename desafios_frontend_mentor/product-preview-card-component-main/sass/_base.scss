@@ -1,0 +1,55 @@
+// ---------------- colors -------------------//
+
+$primary-dark-cyan: hsl(158, 36%, 37%);
+$primary-cream:hsl(30, 38%, 92%);
+
+$neutral-dark-blue: hsl(212, 21%, 14%);
+$neutral-gray-blue: hsl(228, 12%, 48%);
+$neutral-white: hsl(0, 0%, 100%);
+
+// ----------------Typography-----------------//
+
+$font-title: 'Fraunces', serif;
+$font-pragraph: 'Montserrat', sans-serif;
+
+//-----------------Style Typography-------------//
+
+@mixin title{
+    font-family: $font-title;
+    font-size: 1.5em;
+}
+
+@mixin paragraph {
+    font-family: $font-pragraph;
+    color: $neutral-gray-blue;
+    font-size: 0.8em
+
+}
+
+@mixin price {
+    @include title();
+    color:$primary-dark-cyan;
+}
+
+@mixin offer{
+    @include paragraph();
+    font-size: 0.7em;
+    text-decoration: line-through;
+}
+
+h1{
+    @include title()
+}
+
+p{
+    @include paragraph()
+}
+
+@media (min-width: 1024px){
+    h1{
+        font-size: 2.7em;
+    }
+    p{
+        font-size: 1.2em;
+    }
+}

@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-size: 1.5em;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  color: #6c7289;
+  font-size: 0.8em;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.7em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-size: 1.5em;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  color: #6c7289;
+  font-size: 0.8em;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.7em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+}
+
+.container-card {
+  border-radius: 15%;
+  width: 300px;
+  margin: 1.2em;
+}
+
+.container-card-img {
+  border-radius: 15px;
+}
+
+.container-card-img img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.container-card-text {
+  background-color: white;
+  padding: 1.2em;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.container-card-text_price .price {
+  font-family: "Fraunces", serif;
+  font-size: 1.5em;
+  color: #3c8067;
+}
+
+.container-card-text_price .price_off {
+  font-family: "Montserrat", sans-serif;
+  color: #6c7289;
+  font-size: 0.8em;
+  font-size: 0.7em;
+  text-decoration: line-through;
+}
+
+.container-card-bt {
+  width: 100%;
+}
+
+.container-card-bt button {
+  background-color: #3c8067;
+  border: 0px;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  padding: 0.2em;
+  color: white;
+  font-size: 0.7em;
+  font-weight: 700;
+}
+
+.container-card-bt button:hover {
+  background-color: greenyellow;
+}
+
+@media (min-width: 768px) {
+  .container-card-img {
+    border-radius: 15px;
+  }
+  .container-card-img img {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0px;
+  }
+  .container-card-text {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-card {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container-card-text {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.container {
+  background-color: #f2ebe3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-card {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-card-img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.container-card-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+.container-card-text_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.container-card-bt button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+
+@media (min-width: 768px) {
+  .container-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=style.css.map */
