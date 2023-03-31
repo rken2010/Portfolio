@@ -1,0 +1,27 @@
+@import "services";
+@import "testimonial";
+@import "work";
+@import "button";
+@import "../typography";
+@import "../color";
+
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.home{
+    height: 100vh;
+    background-image: url("../../images/mobile/image-header.jpg");
+    background-position: center;
+    background-size: cover;
+    @include title($White);
+}
+
+@media (min-width:425px){
+    .home{
+        background-image: url(../../images/desktop/image-header.jpg);
+    }
+}
+

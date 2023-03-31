@@ -1,0 +1,25 @@
+.home{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    &__title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+
+            margin:0 auto;
+        }
+    }
+}
+.brand{
+    &__images--desk{
+        display: none;
+    }
+    &__text{
+        padding: 5%;
+    }
+    @include services;
+    
+}

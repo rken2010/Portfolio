@@ -1,0 +1,11 @@
+@mixin button(){
+    font-family: $primary;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    text-decoration: none;
+}
+
+@mixin button--hover($color){
+    text-decoration: underline;
+    line-height: 0.1rem;
+}
