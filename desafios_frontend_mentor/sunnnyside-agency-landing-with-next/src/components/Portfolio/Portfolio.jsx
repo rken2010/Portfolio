@@ -6,11 +6,12 @@ export default function Portfolio( ) {
   
   return (
     <Stack
-      direction="row"
+      direction={{base:"column", md:"row"}}
+      as="section"
     >
     <Box
-        flexWrap ="wrap"
-        display={{basic:"flex", md:"none"}}
+      display={{basic:"flex", md:"none"}}
+      flexWrap ="wrap"     
     >
         <Image src="/img/mobile/image-gallery-milkbottles.jpg" alt="milkbottles"/>
         <Image src="/img/mobile/image-gallery-orange.jpg" alt="orange"/>
