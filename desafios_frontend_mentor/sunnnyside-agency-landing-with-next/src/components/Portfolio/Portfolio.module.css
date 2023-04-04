@@ -1,0 +1,18 @@
+.portfolio__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio__container__mobile{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@media (min-width:425px) {
+    .portfolio__container{
+        flex-direction: row;       
+    }
+    .portfolio__container__mobile{
+        display: none;
+    }
+}
