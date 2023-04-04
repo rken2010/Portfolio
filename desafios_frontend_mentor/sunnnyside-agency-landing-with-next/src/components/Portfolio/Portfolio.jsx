@@ -14,7 +14,7 @@ export default function Portfolio( ) {
       <Image src="/img/mobile/image-gallery-cone.jpg" alt="cone"/>
       <Image src="/img/mobile/image-gallery-sugar-cubes.jpg" alt="sugar cubes"/>
     </div>
-    <div>
+    <div className={styles.portfolio__container__desktop}>
      <Image src="/img/desktop/image-gallery-milkbottles.jpg" alt="milkbottles"/>
      <Image src="/img/desktop/image-gallery-orange.jpg" alt="orange"/>
      <Image src="/img/desktop/image-gallery-cone.jpg" alt="cone"/>

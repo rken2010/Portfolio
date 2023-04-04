@@ -4,15 +4,25 @@
 }
 
 .portfolio__container__mobile{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
+
+.portfolio__container__desktop{
+    display: none;
+}
+
 @media (min-width:425px) {
     .portfolio__container{
         flex-direction: row;       
     }
     .portfolio__container__mobile{
         display: none;
+    }
+    .portfolio__container__desktop{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
