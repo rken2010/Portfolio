@@ -5,7 +5,9 @@ import { Image, Box, Stack } from '@chakra-ui/react'
 export default function Portfolio( ) {
   
   return (
-    <Stack>
+    <Stack
+      direction="row"
+    >
     <Box
         flexWrap ="wrap"
         display={{basic:"flex", md:"none"}}
@@ -22,9 +24,9 @@ export default function Portfolio( ) {
      <Image src="/img/desktop/image-gallery-milkbottles.jpg" alt="milkbottles"/>
      <Image src="/img/desktop/image-gallery-orange.jpg" alt="orange"/>
      <Image src="/img/desktop/image-gallery-cone.jpg" alt="cone"/>
-     <Image src="/img/desktop/image-gallery-sugar-cubes.jpg" alt="sugar cubes"/>
+     <Image src="/img/desktop/image-gallery-sugarcubes.jpg" alt="sugar cubes"/>
     </Box>
-    </Stack>
+  </Stack>
 
   )
 }
