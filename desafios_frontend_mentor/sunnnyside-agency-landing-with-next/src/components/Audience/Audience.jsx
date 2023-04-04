@@ -34,7 +34,7 @@ export default function Audience( props ) {
       </GridItem>
       <GridItem
         rowStart={{base:"1", md:"1"}} 
-        colSpan={{base:"1", md:"2/3"}}
+        colStart={{base:"1", md:"2"}}
       >
        
 
