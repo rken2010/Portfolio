@@ -11,8 +11,10 @@ export default function Brand( props ) {
       alignItems="center"
     >
       <GridItem  rowSpan={{base:"1"}} colSpan={{base:"1", md:"1"}} > 
+        <Box display="flex">
         <Image src={props.imageMobile} display={{base:"inline", md:"none"}} />
         <Image src={props.imageWeb} display={{base:"none", md:"inline"}}/>
+        </Box>
       </GridItem>
       <GridItem
      
