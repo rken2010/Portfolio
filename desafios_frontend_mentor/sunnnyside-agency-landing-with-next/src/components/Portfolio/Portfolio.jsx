@@ -1,8 +1,6 @@
 import React from 'react';
 import Image from 'next/image'
-import styles from "./Portfolio.module.css"
-
-
+import styles from './Porfolio.module.css';
 
 
 export default function Portfolio( ) {
