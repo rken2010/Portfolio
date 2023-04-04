@@ -33,7 +33,8 @@ export default function Audience( props ) {
         </Box>
       </GridItem>
       <GridItem
-        rowSpan={{base:"1", md:"1"}} colSpan={{base:"1", md:"2/3"}}
+        rowStart={{base:"1", md:"1"}} 
+        colSpan={{base:"1", md:"2/3"}}
       >
        
 
