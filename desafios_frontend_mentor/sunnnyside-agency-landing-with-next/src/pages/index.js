@@ -35,11 +35,7 @@ export default function Home() {
        <Principal titulo={TitleWeb.text}/>
        <Brand title={ BrandSection.title} description={BrandSection.description} imageWeb={BrandSection.imageWeb} imageMobile={BrandSection.imageMobile} lineColor={BrandSection.color}/>
        <Audience title={ AudienceSection.title} description={AudienceSection.description} imageWeb={AudienceSection.imageWeb} imageMobile={AudienceSection.imageMobile} lineColor={AudienceSection.color}/>
-        <Works           imageMobile={WorksSection.imageMobile} 
-          imageWeb={WorksSection.imageWeb}
-          title={ WorksSection.title}
-          description={WorksSection.description}
-          colorTypograph={WorksSection.colorTypograph}
+        <Works imageMobile={WorksSection.imageMobile} imageWeb={WorksSection.imageWeb} title={ WorksSection.title} description={WorksSection.description} colorTypograph={WorksSection.colorTypograph}
         />
         <Portfolio />
       
