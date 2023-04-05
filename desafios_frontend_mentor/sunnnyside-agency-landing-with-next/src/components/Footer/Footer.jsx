@@ -12,6 +12,7 @@ export default function Portfolio( ) {
             justifyContent="center"
             alignItems="center"
             spacing={5}
+            p={5}
         >
             <Box
                 color="neutral.100"
@@ -21,7 +22,10 @@ export default function Portfolio( ) {
                     margin="0 auto"
                 />
             </Box>
-            <Box>
+            <Box
+                display="flex"
+                justifyContent="space-evenly"
+            >
                 <Link as={NextLink} href='/about'>About</Link>
                 <Link href='#'>Services</Link>
                 <Link href='#'>Proyects</Link>
@@ -29,7 +33,7 @@ export default function Portfolio( ) {
             <Box
                 display="flex"
                 color="neutral.100"
-                justifyContent="center"
+                justifyContent="space-evenly"
             >
                 <Link href='https://www.facebook.com' isExternal>
                     <Image src="/img/icon-facebook.svg" alt="Facebook"/>
