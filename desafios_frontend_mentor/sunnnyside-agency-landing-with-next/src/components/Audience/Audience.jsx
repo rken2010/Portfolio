@@ -37,7 +37,7 @@ export default function Audience( props ) {
         colStart={{base:"1", md:"2"}}
       >
        <Box display="flex">
-        <Image src={props.imageMobile} display={{base:"initial", md:"none"}}/>
+        <Image src={props.imageMobile} display={{base:"initial", md:"none"}} alt=""/>
         <Image src={props.imageWeb} display={{base:"none", md:"initial"}}/>
         </Box>
       </GridItem>
