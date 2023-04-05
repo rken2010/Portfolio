@@ -1,18 +1,17 @@
-import { Box, Heading, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, Heading, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 
 function Works(props) {
   return (
     <Stack
-        spacing={0}
-        m={0}
-        h="100vh"
+        h={{base:"100vh",}}
+        w={{md:"50vw"}}
         bgImage={{base:`${props.imageMobile}`, md:`${props.imageWeb}`}}
         bgPosition="center"
         bgRepeat="no-repeat"
         bgSize="cover"
         justify="end"
-        p="1.5em"
+        
     >
         <Box
             display="flex"
@@ -20,10 +19,11 @@ function Works(props) {
             gap="1.2em" 
             alignItems="center"
             justifyContent="end"
-         
+            p="2em"         
         >
             <Heading
                 color={props.colorTypograph}
+                fontSize={{md:"1.5em"}}
             >
                 {props.title}</Heading>
             <Text

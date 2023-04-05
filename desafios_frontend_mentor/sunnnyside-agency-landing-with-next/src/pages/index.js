@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header/Header'
@@ -34,12 +34,12 @@ export default function Home() {
        <Principal titulo={TitleWeb.text}/>
        <Brand title={ BrandSection.title} description={BrandSection.description} imageWeb={BrandSection.imageWeb} imageMobile={BrandSection.imageMobile} lineColor={BrandSection.color}/>
        <Audience title={ AudienceSection.title} description={AudienceSection.description} imageWeb={AudienceSection.imageWeb} imageMobile={AudienceSection.imageMobile} lineColor={AudienceSection.color}/>
-       <Stack>
+       <section className={styles.works} >
           {
             WorksSection.map((WorksSection) => <Works title={ WorksSection.title} description={WorksSection.description} imageWeb={WorksSection.imageWeb} imageMobile={WorksSection.imageMobile} colorTypograph={WorksSection.color} />
             )
           }
-       </Stack>
+       </section>
        <Portfolio />
        <Footer />
        
