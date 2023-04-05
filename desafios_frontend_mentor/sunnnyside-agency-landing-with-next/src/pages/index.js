@@ -8,6 +8,7 @@ import Brand from '@/components/Brand/Brand'
 import Audience from '@/components/Audience/Audience'
 import Works from '@/components/Works/Works'
 import Portfolio from '@/components/Portfolio/Portfolio'
+import Footer from '@/components/Footer/Footer'
 import { AudienceSection, TitleWeb, BrandSection, WorksSection } from '@/content'
 
 
@@ -34,6 +35,7 @@ export default function Home() {
        <Brand title={ BrandSection.title} description={BrandSection.description} imageWeb={BrandSection.imageWeb} imageMobile={BrandSection.imageMobile} lineColor={BrandSection.color}/>
        <Audience title={ AudienceSection.title} description={AudienceSection.description} imageWeb={AudienceSection.imageWeb} imageMobile={AudienceSection.imageMobile} lineColor={AudienceSection.color}/>
        <Portfolio />
+       <Footer />
       </main>
     </>
   )
