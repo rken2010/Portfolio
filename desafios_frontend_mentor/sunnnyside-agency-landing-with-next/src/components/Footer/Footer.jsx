@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Box, Stack } from '@chakra-ui/react'
+import { Link, Box, Stack, Image } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
 export default function Portfolio( ) {
