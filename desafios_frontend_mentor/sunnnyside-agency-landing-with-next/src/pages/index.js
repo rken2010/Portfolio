@@ -36,7 +36,7 @@ export default function Home() {
        <Audience title={ AudienceSection.title} description={AudienceSection.description} imageWeb={AudienceSection.imageWeb} imageMobile={AudienceSection.imageMobile} lineColor={AudienceSection.color}/>
        <section className={styles.works} >
           {
-            WorksSection.map((WorksSection) => <Works title={ WorksSection.title} description={WorksSection.description} imageWeb={WorksSection.imageWeb} imageMobile={WorksSection.imageMobile} colorTypograph={WorksSection.color} />
+            WorksSection.map((WorksSection) => <Works title={ WorksSection.title} description={WorksSection.description} imageWeb={WorksSection.imageWeb} imageMobile={WorksSection.imageMobile} colorTypograph={WorksSection.color} key={WorksSection.title} />
             )
           }
        </section>
