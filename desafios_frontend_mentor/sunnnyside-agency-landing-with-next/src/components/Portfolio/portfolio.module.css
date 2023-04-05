@@ -1,8 +1,7 @@
 .portfolio__container{
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+
 }
 
 .portfolio__container__mobile{

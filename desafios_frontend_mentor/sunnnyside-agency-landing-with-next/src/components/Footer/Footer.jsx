@@ -2,26 +2,38 @@ import React from 'react';
 import { Link, Box, Stack, Image } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
+
 export default function Portfolio( ) {
   
     return (
         <Stack 
             as="footer"
             bg="primary.500"
+            justifyContent="center"
+            alignItems="center"
+            spacing={5}
         >
-            <Box>
+            <Box
+                color="neutral.100"
+            >
                 <Image 
                     src="/img/logo.svg"
                     margin="0 auto"
                 />
             </Box>
             <Box>
-                <Link as={NextLink} href='/About'>About</Link>
+                <Link as={NextLink} href='/about'>About</Link>
                 <Link href='#'>Services</Link>
                 <Link href='#'>Proyects</Link>
             </Box>
-            <Box>
-                <Image src="/img/icon-facebook.svg" alt="Facebbok"/>
+            <Box
+                display="flex"
+                color="neutral.100"
+                justifyContent="center"
+            >
+                <Link href='https://www.facebook.com' isExternal>
+                    <Image src="/img/icon-facebook.svg" alt="Facebook"/>
+                </Link>
                 <Image src="/img/icon-instagram.svg" alt="Instagram"/>
                 <Image src="/img/icon-twitter.svg" alt="Twitter"/>
                 <Image src="/img/icon-pinterest.svg" alt="Pinterest"/>
