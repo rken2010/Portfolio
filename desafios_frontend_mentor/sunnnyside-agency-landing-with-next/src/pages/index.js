@@ -9,9 +9,10 @@ import Audience from '@/components/Audience/Audience'
 import Works from '@/components/Works/Works'
 import Portfolio from '@/components/Portfolio/Portfolio'
 import Footer from '@/components/Footer/Footer'
-import { AudienceSection, TitleWeb, BrandSection, WorksSection } from '@/content'
+import { AudienceSection, TitleWeb, BrandSection, WorksSection, TestimonialsContents } from '@/content'
 
-import { Stack } from '@chakra-ui/react'
+import { Box, Stack } from '@chakra-ui/react'
+import Testimonials from '@/components/Testimonials/Testimonials'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -34,12 +35,13 @@ export default function Home() {
        <Principal titulo={TitleWeb.text}/>
        <Brand title={ BrandSection.title} description={BrandSection.description} imageWeb={BrandSection.imageWeb} imageMobile={BrandSection.imageMobile} lineColor={BrandSection.color}/>
        <Audience title={ AudienceSection.title} description={AudienceSection.description} imageWeb={AudienceSection.imageWeb} imageMobile={AudienceSection.imageMobile} lineColor={AudienceSection.color}/>
-       <section className={styles.works} >
+       <Box as="section" display="flex" flexDirection={{base:"column", md:"row"}}>
           {
             WorksSection.map((WorksSection) => <Works title={ WorksSection.title} description={WorksSection.description} imageWeb={WorksSection.imageWeb} imageMobile={WorksSection.imageMobile} colorTypograph={WorksSection.color} key={WorksSection.title} />
             )
           }
-       </section>
+       </Box>
+       <Testimonials testimonials={ TestimonialsContents } />
        <Portfolio />
        <Footer />
        

@@ -10,10 +10,10 @@ export default function Brand( props ) {
       justifyItems="center"
       alignItems="center"
     >
-      <GridItem  rowSpan={{base:"1"}} colSpan={{base:"1", md:"1"}} > 
+      <GridItem  rowSpan={{base:"1"}} colSpan={{base:"1", md:"1"}}  width={{xl:"100%"}}> 
         <Box display="flex">
-        <Image src={props.imageMobile} display={{base:"inline", md:"none"}} />
-        <Image src={props.imageWeb} display={{base:"none", md:"inline"}}/>
+        <Image src={props.imageMobile} display={{base:"inline", md:"none"}} width={"100%"}/>
+        <Image src={props.imageWeb} display={{base:"none", md:"inline"}} width={"100%"}/>
         </Box>
       </GridItem>
       <GridItem
@@ -23,15 +23,19 @@ export default function Brand( props ) {
           display="flex"
           flexDirection="column"
           gap={10}
-          p={10}
+          p={{base:"1em", md:"2em", xl:"3em"}}
+          alignItems="center"
+          justifyContent="center"
         >
         <Heading
           as="h3"
           textAlign="center"
-          fontSize={{base:"1.2em", md:"1.5em", lg:"2em"}}
+          fontSize={{base:"1.2em", md:"1.5em", lg:"2.5em"}}
         >{props.title}</Heading>
         <Text
           textAlign={{base:"center", md:"justify"}}
+          fontSize={{base:"1em", md:"1.2em", lg:"1.7em"}}
+          p={{xl:"3em"}}
         
         >{props.description}</Text>
         </Box>

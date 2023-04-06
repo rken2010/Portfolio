@@ -23,12 +23,14 @@ function Works(props) {
         >
             <Heading
                 color={props.colorTypograph}
-                fontSize={{md:"1.5em"}}
+                fontSize={{base:"1.2em", md:"1.5em", lg:"2.5em"}}
             >
                 {props.title}</Heading>
             <Text
                 color={props.colorTypograph}
                 textAlign="center"
+                fontSize={{base:"1em", md:"1.2em", lg:"1.7em"}}
+                p={{xl:"2em"}}
             >
                 {props.description}
             </Text>

@@ -25,7 +25,7 @@ function Principal({titulo,other}) {
   >
     <Heading 
       as="h2"
-      fontSize="2em"
+      fontSize={{base:"2em", md:"2.5em", xl:"4em"}}
       textTransform="uppercase"
       color="neutral.500"
       textAlign="center"
