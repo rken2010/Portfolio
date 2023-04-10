@@ -7,11 +7,10 @@ function Testimonials( {testimonials} ) {
     <section className={styles.testimonials}>
       <h3 className={styles.testimonials__title} >Client Testimonials</h3>
       <div className={styles.testimonials__container}>
-
         {
 
         testimonials.map ((testimonials)=> 
-        <div className={styles.testimonial__card} key={testimonials?.name}>
+        <div className={styles.testimonials__card} key={testimonials?.name}>
             <div className={styles.testimonials__card__avatar} >
                 <img src={testimonials?.avatar} alt={testimonials?.name} />
             </div>
