@@ -19,9 +19,13 @@ export default function Portfolio( ) {
             <Box
                 color="neutral.100"
             >
+                <Link href='#' >
                 <Image src="/img/logo.svg" w={{base:"150px", md:"170px", xl:"210px"}}/>
+                </Link>
            </Box>
             <Box
+                w="100%"
+                justifyContent="space-evenly"
                 display="flex"
                 gap={{base:"1.1em", md:"1.5em", xl:"2em"}}
                 fontSize={{base:"1em", md:"1.2em", lg:"2em"}}
@@ -35,6 +39,8 @@ export default function Portfolio( ) {
                 display="flex"
                 color="neutral.100"
                 gap={{base:"1.3em", md:"1.7em", xl:"2.2em"}}
+                w="100%"
+                justifyContent="space-evenly"
             >
                 <Link href='https://www.facebook.com' isExternal>
                     <Image src="/img/icon-facebook.svg" alt="Facebook" w={{base:"30px", md:"40px", xl:"50px"}}/>
