@@ -20,6 +20,8 @@
 .testimonials__card{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     gap: 15px;
  
 }
@@ -95,15 +97,9 @@
 }
 
 @media (min-width:1024px){
-    .testimonials__container{
-        gap: 75px;
-       
-    }
-
-
     .testimonials__card__text__footer  {
-        font-size: 1.7em;
-        line-height: 3;
+        font-size: 1.5em;
+        
     }
    
 }
