@@ -1,77 +1,91 @@
 import React from 'react';
 
-import {
-  Stack,
-  Box,
-  Heading,
-  Text,
-  Button,
-  List,
-  ListItem,
-} from '@chakra-ui/react';
+import { Stack, Box, Heading, Button, Text} from '@chakra-ui/react';
 
-export default function ServiceCard ({header, title,descripcion}) {
-  console.log(title)
+export default function CardService({ header, title, descripcion }) {
   return (
-    <Stack
-      maxW="320px"
-      boxShadow="2xl"
-      borderRadius="25px"
-      p="0"
-      m="25px"
+  <Stack
+    style={{perspective:"800"}}
+    
     >
       <Stack
-        pos="relative"
-        zIndex={1}
-        bgImage={header}
-        borderTopLeftRadius="30px"
-        borderTopRightRadius="25px"
-        h="150px"
-        color="white"
-      >
-        <Box p={4} color="white">
-          <Heading
-            as={"h3"}
-            fontSize={"24px"}
-            textAlign={"center"}
-          >
-            {title}
-          </Heading>
-        </Box>
-      </Stack>
-      <Stack
-        spacing={8}
-        direction="column"
-        alignItems="space-evenly"
-        justifyContent="end"
+        p="relative"
+        w="320px"
         h="400px"
+        boxShadow="2xl" 
+        borderRadius="25px"
+        transition= ".7s ease"
+        style={{
+          transformStyle: "preserve-3d",
+        }}
+        _hover={{ transform: 'rotateY(180deg)' }}
       >
-        <Box h="100%" px="15px">
-          <Heading as="h2" size="lg" noOfLines={1}>
-            titulo
-          </Heading>
-          <Heading as="h4" size="xs" fontSize="12px" noOfLines={1}>
-            subtitulo
-          </Heading>
-        </Box>
-        <Box h="100%" px="15px">
-          <List spacing={3}>
-            <ListItem>{descripcion}</ListItem>
-          </List>
-        </Box>
-        <Box
+        <Stack
+          w="100%"
           h="100%"
-          px="15px"
-          direction="row"
-          margin="5px"
-          justifyContent='center'
-          alignItems="center"
+          boxShadow="2xl" 
+          borderRadius="25px"
+          style={ {backfaceVisibility: "hidden"}}
+          backgroundImage={header}
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          alignItems={"center"}
+          justifyContent={"center"}
+          textAlign={"center"}
+          color="white"
+          textShadow="-3px 5px 5px rgba(0, 0, 0, 0.82)"
+          
+         >     
+            <Heading as="h2" size={{ sm: 'sm', lg: 'lg' }}>
+                    {title}
+            </Heading>        
+        </Stack>
+        <Stack 
+          
+          p={4} 
+          position="absolute"
+          top= "0"
+          left= "0"	
+          style={ {backfaceVisibility: "hidden"}}
+          transform="rotateY(180deg)"
         >
-          <Button colorScheme="teal" size="md" mb="10px">
-            Consultar
-          </Button>
-        </Box>
-      </Stack>
+            <Stack
+                spacing={8}
+                direction="column"
+                alignItems="center"
+                justifyContent="center"    
+                
+            >
+                <Box  px="15px" h="100px" display="flex" flexDirection="column" gap={5}>
+                  <Heading as="h2" size={{ sm: 'sm', lg: 'md' }}>
+                    {title}
+                  </Heading>
+                  <Heading as="h4" size="xs" fontSize="12px">
+                    subtitulo
+                  </Heading>
+                </Box>
+                <Box h="150px" px="15px">
+                  <Text>
+                  {descripcion}
+                  </Text>
+                </Box>
+                <Box
+                  display="flex"
+                  h="40px"
+                  margin="5px"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                <Button colorScheme="teal" size="md" mb="10px">
+                  Consultar
+                </Button>
+                </Box>
+            </Stack>
+        </Stack>     
     </Stack>
+   </Stack>
+   
+
   );
 }
+
