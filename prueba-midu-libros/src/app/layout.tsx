@@ -1,3 +1,4 @@
+
 import './globals.css'
 import type { Metadata } from 'next'
 
@@ -16,7 +17,7 @@ export default function RootLayout({
     <html lang="es">
       <body>
         <main className='grid min-h-screen grid-rows-[50px,1fr,100px] gap-4 m-auto max-w-lg px-4'>
-          <nav className='flex items-center text-2xl'></nav>
+       
           <section >{children}</section>
           <footer className='flex items-center justify-center'></footer>
         </main>
