@@ -2,7 +2,7 @@
 "use client"
 
 import libros  from "@/app/libros.json"
-import { useState } from "react"
+import { useMemo, useState } from "react"
 
 /* 
   * * Diseño: 
@@ -19,7 +19,11 @@ import { useState } from "react"
   * * GENEROS:
   * Utilizando el array de books, creamos un nuevo array (Array.from) generados con un SET que evita la
   * repeticion de elementos. Cargamos este SET recorriendo el array de libros y guardando su elemento genero.
-
+  * * USEMEMO:
+  * Por cada cambio de genre aplicamos el filtro que nos muestra los libros de ese genero. Si no hay genero
+  * retorna el array de libros completo.
+  * * READLIST:
+  
 */
 export interface Book {
   title: string
@@ -42,14 +46,25 @@ const genres:string[] = Array.from(new Set (books.map((libros)=> libros.genre)))
 export default function Home() {
 
   const[genre, setGenre] = useState<string>("")
+  const[readList, setReadList] = useState<Book["ISBN"][]>([])
 
-  const matches = genre
-    ? books.filter((book) => {
+  function addReadList(book: Book["ISBN"]){
+   setReadList( (readList) => readList.includes(book)? 
+    readList.filter(readBook => readBook !== book)
+   : [...readList,book])
+    console.log(readList)
+  }
+
+  const matches = useMemo(()=>{
+    if (!genre) return books;
+
+    return books.filter((book) => {
       if (book.genre !== genre) return false
       return true
     })
-    :books
 
+  }, [genre])
+  
   return (
     <section>
       <nav className='flex items-center text-2xl'>
@@ -64,11 +79,19 @@ export default function Home() {
     
     <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-3">
       {matches.map( (book) =>(
-        <div key={book.ISBN}> 
+        <div key={book.ISBN} className="flex items-center flex-col"> 
           <img className="aspect-[9/14] object-cover" src={book.cover} alt={book.title} />
-          <h2>{book.title} </h2>
-        </div>))}
+          <h2>
+            {readList.includes(book.ISBN)?"❤️":"🖤"}
+          </h2>
+          <h2>
+            {book.title}
+          </h2>
+          <button onClick={()=>{addReadList(book.ISBN)}}>Agregar a la lista</button>
+        </div>
+        ))}
     </div>
-    </section>
+   
+      </section>
   )
 }
